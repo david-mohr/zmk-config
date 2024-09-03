@@ -149,7 +149,7 @@
             &kp TILDE   &kp DQT     &kp GT    &kp BSLH   &trans         &kp BSPC    &updir    &kp LBKT   &kp RBKT  &kp PRCNT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  -       │  *       │  =       │  #       │   │  |       │  :       │  (       │  )       │  ;       │
-            &kp EXCL   &kp AT     &kp ASTRK   &kp DLLR   &kp HASH      &kp PIPE  &kp COLON  &kp LPAR   &kp RPAR   &kp SEMI
+            &kp EXCL   &kp AT     &kp ASTRK  &kp EQUAL   &kp HASH      &kp PIPE  &kp COLON  &kp LPAR   &kp RPAR   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ ^        │  &       │  +       │  _       │          │   │          │  $       │  [       │  ]       │  @       │
             &kp CARET  &kp AMPS   &kp PLUS  &kp UNDER     &trans        &trans   &kp DLLR    &kp LBRC   &kp RBRC   &kp AT
