@@ -94,6 +94,16 @@
       key-positions = <1 11>;
       bindings = <&lm 1 LALT>;
     };
+    combo_ltri {
+      timeout-ms = <50>;
+      key-positions = <30 31>;
+      bindings = <&mo 3>;
+    };
+    combo_rtri {
+      timeout-ms = <50>;
+      key-positions = <32 33>;
+      bindings = <&mo 3>;
+    };
   };
   conditional_layers {
     compatible = "zmk,conditional-layers";
