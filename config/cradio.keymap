@@ -115,7 +115,7 @@
           &rpi LGUI A  &rpil 1 R  &rpi LCTRL S   &kp T      &kp G          &kp M   &kp N   &rpi RCTRL E &rpil 1 I   &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+         &rpi LCTRL Z &rpi LSHFT X &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp SPACE   &kp TAB         &mo 2    &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -129,7 +129,7 @@
             &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &kp N0      &kp N1     &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
+            &kp N0      &kp N1  &ht LCTRL N2  &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  4       │  5       │  6       │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
             &caps_word  &kp N4     &kp N5     &kp N6     &trans         &trans    &kp GRAVE  &kp PG_DN   &trans     &kp C_VOL_DN
