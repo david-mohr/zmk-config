@@ -134,7 +134,7 @@
       key-positions = <9 19>;
       bindings = <&caps_word>;
     };
-    combo_caps_word {
+    combo_rwin {
       timeout-ms = <50>;
       key-positions = <19 29>;
       bindings = <&kp RWIN>;
