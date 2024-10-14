@@ -127,11 +127,11 @@
       key-positions = <5 15>;
       bindings = <&kp BSPC>;
     };
-    // combo_sqt {
-    //   timeout-ms = <50>;
-    //   key-positions = <6 16>;
-    //   bindings = <&kp SQT>;
-    // };
+    combo_colon {
+      timeout-ms = <50>;
+      key-positions = <6 16>;
+      bindings = <&kp COLON>;
+    };
     combo_rctrl {
       timeout-ms = <50>;
       key-positions = <7 17>;
