@@ -82,83 +82,78 @@
   combos {
     compatible = "zmk,combos";
     combo_lwin {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <10 20>;
       bindings = <&kp LWIN>;
     };
     combo_lalt {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <0 10>;
       bindings = <&kp LALT>;
     };
     combo_l1 {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <1 11>;
       bindings = <&mo 1>;
     };
     combo_lctrl {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <2 12>;
       bindings = <&kp LCTRL>;
     };
-    combo_tab {
-      timeout-ms = <50>;
+    combo_lshft {
+      timeout-ms = <75>;
       key-positions = <3 13>;
+      bindings = <&kp LSHFT>;
+    };
+    combo_tab {
+      timeout-ms = <75>;
+      key-positions = <4 14>;
       bindings = <&kp TAB>;
     };
     combo_del {
-      timeout-ms = <50>;
-      key-positions = <4 14>;
-      bindings = <&kp DEL>;
-    };
-    combo_lshft {
-      timeout-ms = <50>;
-      key-positions = <13 14>;
-      bindings = <&sk LSHFT>;
+      timeout-ms = <75>;
+      key-positions = <3 4>;
+      bindings = <&sk DEL>;
     };
 
-    combo_rshft {
-      timeout-ms = <50>;
-      key-positions = <15 16>;
-      bindings = <&sk RSHFT>;
-    };
     combo_bspc {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <5 15>;
       bindings = <&kp BSPC>;
     };
-    combo_colon {
-      timeout-ms = <50>;
+    combo_rshft {
+      timeout-ms = <75>;
       key-positions = <6 16>;
-      bindings = <&kp COLON>;
+      bindings = <&kp RSHFT>;
     };
     combo_rctrl {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <7 17>;
       bindings = <&kp RCTRL>;
     };
     combo_r2 {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <8 18>;
       bindings = <&mo 2>;
     };
     combo_caps_word {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <9 19>;
       bindings = <&caps_word>;
     };
     combo_rwin {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <19 29>;
       bindings = <&kp RWIN>;
     };
     combo_ladmin {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <30 31>;
       bindings = <&mo 4>;
     };
     combo_radmin {
-      timeout-ms = <50>;
+      timeout-ms = <75>;
       key-positions = <32 33>;
       bindings = <&mo 4>;
     };
