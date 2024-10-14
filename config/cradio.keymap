@@ -74,25 +74,51 @@
   };
   combos {
     compatible = "zmk,combos";
-    combo_lshft {
+    combo_lalt {
+      timeout-ms = <50>
+      key-positions = <0 10>;
+      bindings = <&kp LALT>;
+    };
+    combo_l1 {
+      timeout-ms = <50>;
+      key-positions = <1 11>;
+      bindings = <&mo 1>;
+    };
+    combo_lctrl {
+      timeout-ms = <50>
+      key-positions = <2 12>;
+      bindings = <&kp LCTRL>;
+    };
+    combo_tab {
       timeout-ms = <50>;
       key-positions = <3 13>;
-      bindings = <&kp LSHFT>;
+      bindings = <&kp TAB>;
     };
-    combo_rshft {
+    combo_del {
+      timeout-ms = <50>;
+      key-positions = <4 14>;
+      bindings = <&kp DEL>;
+    };
+
+    combo_bspc {
+      timeout-ms = <50>;
+      key-positions = <5 15>;
+      bindings = <&kp BSPC>;
+    };
+    combo_rctrl {
       timeout-ms = <50>;
       key-positions = <6 16>;
       bindings = <&kp RSHFT>;
     };
     combo_sqt {
       timeout-ms = <50>;
-      key-positions = <2 12>;
+      key-positions = <7 17>;
       bindings = <&kp SQT>;
     };
-    combo_alt_arrow {
+    combo_r1 {
       timeout-ms = <50>;
-      key-positions = <1 11>;
-      bindings = <&lm 1 LALT>;
+      key-positions = <8 18>;
+      bindings = <&mo 1>;
     };
     combo_ltri {
       timeout-ms = <50>;
@@ -112,15 +138,15 @@
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ESC     │
-            &kp Q    &rpi LALT W      &kp F      &kp P      &kp B       &kp J      &kp L      &kp U      &kp Y      &kp ESC
+            &kp Q       &kp W      &kp F      &kp P      &kp B         &kp J      &kp L      &kp U      &kp Y       &kp ESC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-          &rpi LGUI A  &rpil 1 R  &rpi LCTRL S   &kp T      &kp G          &kp M   &kp N   &rpi RCTRL E &rpil 1 I   &kp O
+             &kp A     &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
          &rpi LCTRL Z &rpi LSHFT X &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &kp TAB         &mo 2    &kp ENTER
+                                            &kp SPACE   &kp LSHFT         &mo 2    &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
       >;
     };
@@ -132,7 +158,7 @@
             &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &kp N0      &kp N1  &ht LCTRL N2  &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
+            &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  4       │  5       │  6       │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
             &caps_word  &kp N4     &kp N5     &kp N6     &trans         &trans    &kp GRAVE  &kp PG_DN   &trans     &kp C_VOL_DN
