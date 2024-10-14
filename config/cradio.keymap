@@ -6,6 +6,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
 
+&sk {
+    release-after-ms = <500>;
+    quick-release;
+};
 / {
   behaviors {
     ht: hold_tap {
@@ -74,6 +78,11 @@
   };
   combos {
     compatible = "zmk,combos";
+    combo_lwin {
+      timeout-ms = <50>;
+      key-positions = <10 20>;
+      bindings = <&kp LWIN>;
+    };
     combo_lalt {
       timeout-ms = <50>;
       key-positions = <0 10>;
@@ -108,27 +117,37 @@
     combo_rctrl {
       timeout-ms = <50>;
       key-positions = <6 16>;
-      bindings = <&kp RSHFT>;
+      bindings = <&kp RCTRL>;
     };
     combo_sqt {
       timeout-ms = <50>;
       key-positions = <7 17>;
       bindings = <&kp SQT>;
     };
-    combo_r1 {
+    combo_r2 {
       timeout-ms = <50>;
       key-positions = <8 18>;
-      bindings = <&mo 1>;
+      bindings = <&mo 2>;
+    };
+    combo_caps_word {
+      timeout-ms = <50>;
+      key-positions = <9 19>;
+      bindings = <&caps_word>;
+    };
+    combo_caps_word {
+      timeout-ms = <50>;
+      key-positions = <19 29>;
+      bindings = <&kp RWIN>;
     };
     combo_ltri {
       timeout-ms = <50>;
       key-positions = <30 31>;
-      bindings = <&mo 3>;
+      bindings = <&mo 4>;
     };
     combo_rtri {
       timeout-ms = <50>;
       key-positions = <32 33>;
-      bindings = <&mo 3>;
+      bindings = <&mo 4>;
     };
   };
 
@@ -146,7 +165,7 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
          &rpi LCTRL Z &rpi LSHFT X &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &kp LSHFT         &mo 2    &kp ENTER
+                                            &kp SPACE   &kp LSHFT         &mo 3    &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
       >;
     };
@@ -154,11 +173,28 @@
     right_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ END      │  VOL UP  │
-            &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
+        //│          │  HELD    │          │          │          │   │ BSPC     │ HOME     │ PAGE UP  │ END      │  VOL UP  │
+            &none      &none      &none      &none       &none       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
+        //│          │  HELD    │          │          │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
+            &none      &none      &none      &kp LSHFT   &none         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
+            &none       &none     &none      &none       &none         &none    &kp GRAVE  &kp PG_DN   &none     &kp C_VOL_DN
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &kp SQT   &none        &trans   &mkp MCLK
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+      >;
+    };
+
+    right_layer {
+      bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ HELD     │  VOL UP  │
+            &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &none      &none      &none      &none       &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ HELD     │          │
+            &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW    &none        &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  4       │  5       │  6       │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
             &caps_word  &kp N4     &kp N5     &kp N6     &trans         &trans    &kp GRAVE  &kp PG_DN   &trans     &kp C_VOL_DN
