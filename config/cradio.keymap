@@ -111,21 +111,31 @@
       key-positions = <4 14>;
       bindings = <&kp DEL>;
     };
+    combo_lshft {
+      timeout-ms = <50>;
+      key-positions = <13 14>;
+      bindings = <&sk LSHFT>;
+    };
 
+    combo_rshft {
+      timeout-ms = <50>;
+      key-positions = <15 16>;
+      bindings = <&sk RSHFT>;
+    };
     combo_bspc {
       timeout-ms = <50>;
       key-positions = <5 15>;
       bindings = <&kp BSPC>;
     };
+    // combo_sqt {
+    //   timeout-ms = <50>;
+    //   key-positions = <6 16>;
+    //   bindings = <&kp SQT>;
+    // };
     combo_rctrl {
       timeout-ms = <50>;
-      key-positions = <6 16>;
-      bindings = <&kp RCTRL>;
-    };
-    combo_sqt {
-      timeout-ms = <50>;
       key-positions = <7 17>;
-      bindings = <&kp SQT>;
+      bindings = <&kp RCTRL>;
     };
     combo_r2 {
       timeout-ms = <50>;
@@ -168,12 +178,12 @@
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
          &rpi LCTRL Z &rpi LSHFT X &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp SPACE   &sk LSHFT         &sl 3    &kp ENTER
+                                            &kp SPACE   &kp SQT         &sl 3    &kp ENTER
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
       >;
     };
 
-    right_layer {
+    nav_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  HELD    │          │          │          │   │ BSPC     │ HOME     │ PAGE UP  │ END      │  VOL UP  │
@@ -190,7 +200,7 @@
       >;
     };
 
-    left_layer {
+    num_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ HELD     │  VOL UP  │
