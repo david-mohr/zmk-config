@@ -139,12 +139,12 @@
       key-positions = <19 29>;
       bindings = <&kp RWIN>;
     };
-    combo_ltri {
+    combo_ladmin {
       timeout-ms = <50>;
       key-positions = <30 31>;
       bindings = <&mo 4>;
     };
-    combo_rtri {
+    combo_radmin {
       timeout-ms = <50>;
       key-positions = <32 33>;
       bindings = <&mo 4>;
@@ -187,7 +187,7 @@
       >;
     };
 
-    right_layer {
+    left_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ HELD     │  VOL UP  │
@@ -204,7 +204,7 @@
       >;
     };
 
-    left_layer {
+    sym_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ ~        │  "       │  >       │  \       │          │   │  BSPC    │  ../     │  [       │  ]       │  %       │
@@ -221,7 +221,7 @@
       >;
     };
 
-    tri_layer {
+    admin_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
