@@ -135,7 +135,7 @@
     combo_r2 {
       timeout-ms = <75>;
       key-positions = <8 18>;
-      bindings = <&mo 2>;
+      bindings = <&mo 1>;
     };
     combo_caps_word {
       timeout-ms = <75>;
@@ -150,12 +150,12 @@
     combo_ladmin {
       timeout-ms = <75>;
       key-positions = <30 31>;
-      bindings = <&mo 4>;
+      bindings = <&mo 3>;
     };
     combo_radmin {
       timeout-ms = <75>;
       key-positions = <32 33>;
-      bindings = <&mo 4>;
+      bindings = <&mo 3>;
     };
   };
 
@@ -178,31 +178,15 @@
       >;
     };
 
-    nav_layer {
+    // TODO: merge these two layer back into one
+    num_nav_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  HELD    │          │          │          │   │ BSPC     │ HOME     │ PAGE UP  │ END      │  VOL UP  │
-            &none      &none      &none      &none       &none       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
+        //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ END      │  VOL UP  │
+            &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &kp BSPC   &kp HOME  &kp PG_UP  &kp END    &kp C_VOL_UP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  HELD    │          │          │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &none      &none      &none      &kp LSHFT   &none         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
-            &none       &none     &none      &none       &none         &none    &kp GRAVE  &kp PG_DN   &none     &kp C_VOL_DN
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &kp SQT   &none        &trans   &mkp MCLK
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-      >;
-    };
-
-    num_layer {
-      bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESC      │  7       │  8       │  9       │  1       │   │ BSPC     │ HOME     │ PAGE UP  │ HELD     │  VOL UP  │
-            &kp ESC    &kp N7     &kp N8     &kp N9    &kp MINUS       &none      &none      &none      &none       &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ HELD     │          │
-            &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW    &none        &none
+        //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
+            &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  4       │  5       │  6       │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
             &caps_word  &kp N4     &kp N5     &kp N6     &trans         &trans    &kp GRAVE  &kp PG_DN   &trans     &kp C_VOL_DN
