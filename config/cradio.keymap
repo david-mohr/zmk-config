@@ -106,10 +106,10 @@
       key-positions = <3 13>;
       bindings = <&kp LSHFT>;
     };
-    combo_sqt {
+    combo_caps_word {
       timeout-ms = <75>;
       key-positions = <4 14>;
-      bindings = <&kp SQT>;
+      bindings = <&caps_word>;
     };
     combo_del {
       timeout-ms = <75>;
@@ -141,11 +141,6 @@
       timeout-ms = <75>;
       key-positions = <9 19>;
       bindings = <&kp SQT>;
-    };
-    combo_caps_word {
-      timeout-ms = <75>;
-      key-positions = <15 25>;
-      bindings = <&caps_word>;
     };
     combo_rwin {
       timeout-ms = <75>;
