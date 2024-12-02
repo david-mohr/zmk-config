@@ -42,6 +42,12 @@
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
     };
+    td0: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp RCTRL>, <&kp RWIN>;
+    };
   };
   macros {
     updir: updir {
@@ -130,7 +136,8 @@
     combo_rctrl {
       timeout-ms = <75>;
       key-positions = <7 17>;
-      bindings = <&kp RCTRL>;
+      bindings = <&td0>;
+      // bindings = <&kp RCTRL>;
     };
     combo_r2 {
       timeout-ms = <75>;
