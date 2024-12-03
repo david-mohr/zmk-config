@@ -42,11 +42,17 @@
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
     };
-    td0: tap_dance_0 {
+    td_rctrl: tap_dance_0 {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp RCTRL>, <&kp RWIN>;
+    };
+    td_lctrl: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp LCTRL>, <&kp LWIN>;
     };
   };
   macros {
@@ -105,7 +111,7 @@
     combo_lctrl {
       timeout-ms = <75>;
       key-positions = <2 12>;
-      bindings = <&kp LCTRL>;
+      bindings = <&td_lctrl>;
     };
     combo_lshft {
       timeout-ms = <75>;
@@ -136,8 +142,7 @@
     combo_rctrl {
       timeout-ms = <75>;
       key-positions = <7 17>;
-      bindings = <&td0>;
-      // bindings = <&kp RCTRL>;
+      bindings = <&td_rctrl>;
     };
     combo_r2 {
       timeout-ms = <75>;
