@@ -48,7 +48,7 @@
       tapping-term-ms = <200>;
       bindings = <&kp RCTRL>, <&kp RWIN>;
     };
-    td_lctrl: tap_dance_0 {
+    td_lctrl: tap_dance_1 {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
