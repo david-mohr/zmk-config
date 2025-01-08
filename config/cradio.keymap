@@ -190,7 +190,6 @@
       >;
     };
 
-    // TODO: merge these two layer back into one
     num_nav_layer {
       bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -200,8 +199,8 @@
         //│ 0        │  1       │  2       │  3       │  ENTER   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
             &kp N0      &kp N1    &kp N2     &kp N3   &kp ENTER       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  4       │  5       │  6       │          │   │          │ `        │ PAGE DN  │          │ VOL DN   │
-            &caps_word  &kp N4     &kp N5     &kp N6     &trans         &trans    &kp GRAVE  &kp PG_DN   &trans     &kp C_VOL_DN
+        //│ CAPS     │  4       │  5       │  6       │          │   │PRINT SCRN│ `        │ PAGE DN  │          │ VOL DN   │
+            &caps_word  &kp N4     &kp N5     &kp N6     &trans       &kp PSCRN  &kp GRAVE  &kp PG_DN   &trans   &kp C_VOL_DN
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &kp DOT   &kp COLON        &trans   &mkp MCLK
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -232,7 +231,7 @@
             &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-            &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+            &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &kp PSCRN  &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
