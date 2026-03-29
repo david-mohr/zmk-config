@@ -128,6 +128,11 @@
       key-positions = <3 4>;
       bindings = <&kp DEL>;
     };
+    combo_del2 {
+      timeout-ms = <75>;
+      key-positions = <15 25>;
+      bindings = <&kp DEL>;
+    };
 
     combo_bspc {
       timeout-ms = <75>;
@@ -168,6 +173,11 @@
       timeout-ms = <75>;
       key-positions = <32 33>;
       bindings = <&mo 3>;
+    };
+    combo_scrolllock {
+      timeout-ms = <75>;
+      key-positions = <14 24>;
+      bindings = <&kp SLCK>;
     };
   };
 
