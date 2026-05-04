@@ -14,6 +14,9 @@
     release-after-ms = <500>;
 };
 / {
+  kscan {
+    debounce-release-ms = <10>;
+  };
   behaviors {
     ht: hold_tap {
       compatible = "zmk,behavior-hold-tap";
